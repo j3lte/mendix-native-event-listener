@@ -1,0 +1,31 @@
+{
+  "name": "nativeeventlistener",
+  "widgetName": "NativeEventListener",
+  "version": "1.0.0",
+  "description": "Listen for Native Events",
+  "copyright": "© CaffCode 2022. All Rights Reserved.",
+  "author": "Jelte Lagendijk (jelte@caffcode.com)",
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT",
+  "config": {
+    "projectPath": "./tests/testProject"
+  },
+  "packagePath": "caffcode",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:native",
+    "build": "pluggable-widgets-tools build:native",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:native"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^9.0.0",
+    "@types/big.js": "^6.0.2",
+    "@types/react": "~17.0.1",
+    "@types/react-native": "~0.63.52"
+  },
+  "dependencies": {}
+}
