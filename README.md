@@ -23,13 +23,9 @@ Somewhere else in the page (in this case the button), I execute a Nanoflow that 
 
 ![](/assets/JavascriptAction.png)
 
-## Demo project
-
-- Coming soon
-
 ## Issues, suggestions and feature requests
 
-Feedback can be provided on [Github](https://github.com/j3lte/mendix-native-event-listener) or through the feedback button on the demo project page
+Feedback can be provided on [Github](https://github.com/j3lte/mendix-native-event-listener)
 
 ## License
 
