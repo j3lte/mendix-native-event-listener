@@ -1,7 +1,7 @@
 {
   "name": "nativeeventlistener",
   "widgetName": "NativeEventListener",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Listen for Native Events",
   "copyright": "© CaffCode 2022. All Rights Reserved.",
   "author": "Jelte Lagendijk (jelte@caffcode.com)",
