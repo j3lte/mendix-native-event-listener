@@ -1,5 +1,5 @@
 import { ReactElement, createElement, useMemo, useEffect } from "react";
-import { TextStyle, View, ViewStyle, DeviceEventEmitter } from "react-native";
+import { TextStyle, View, ViewStyle, DeviceEventEmitter, EmitterSubscription } from "react-native";
 
 import { Style } from "@mendix/pluggable-widgets-tools";
 
@@ -19,14 +19,13 @@ export function NativeEventListener({ eventList }: NativeEventListenerProps<Cust
             return;
         }
 
-        events.forEach(eventObj => {
-            DeviceEventEmitter.addListener(eventObj.eventName, eventObj.handler);
+        let listeners: EmitterSubscription[] = events.map(eventObj => {
+            return DeviceEventEmitter.addListener(eventObj.eventName, eventObj.handler);
         });
 
         return () => {
-            events.forEach(eventObj => {
-                DeviceEventEmitter.removeListener(eventObj.eventName, eventObj.handler);
-            });
+            listeners.forEach(listener => listener.remove());
+            listeners = [];
         };
     }, [events]);
 
